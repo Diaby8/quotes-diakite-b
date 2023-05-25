@@ -11,7 +11,7 @@ def main():
         quotes = load_quotes("quotes.txt")
         menu()
 
-        choice = input("Choose your an action (1-4): ")
+        choice = input("Choose your an action (1-5): ")
         
         if choice == "1":
             print_quote(random_quote(quotes))
@@ -21,6 +21,9 @@ def main():
             print("Good bye...")
         elif choice == "4":
             add_quote(quotes, filename)
+        elif choice == "5":
+            display_quotes(quotes, count)
+    display_quotes(quotes, count)
             break
         else:
             print("Invalid input")
